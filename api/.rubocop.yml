@@ -1,0 +1,21 @@
+Metrics/LineLength:
+  Max: 120
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+Rails:
+  Enabled: true
+
+Style/MethodCallWithoutArgsParentheses:
+  # Disabled due to `def foo(bar = bar())` -> `def foo(bar = bar)` being a bad correction.
+  AutoCorrect: false
