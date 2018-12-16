@@ -16,6 +16,9 @@ Bundler.require(*Rails.groups)
 module Api
   class Application < Rails::Application
     config.load_defaults 5.2
+
     config.api_only = true
-  end
+
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore, key: "_probe", expire_after: 10.minutes
 end
