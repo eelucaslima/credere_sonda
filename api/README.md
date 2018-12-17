@@ -91,11 +91,11 @@ $ rails s
 - [ ] Use o [Advanced REST client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo) para testar a aplicação;
 &nbsp;
 
-- [ ] Para enviar a sonda para posição inicial, faça um /POST para localhost:3000/start
+- [ ] Para enviar a sonda para posição inicial, faça um /POST para http://localhost:3000/start
 &nbsp;
-- [ ] Para verificar a posição da sonda, faça um /GET para localhost:3000/position
+- [ ] Para verificar a posição da sonda, faça um /GET para http://localhost:3000/position
 &nbsp;
-- [ ] Para mover sonda, faça um /PUT para localhost:3000/move.json escrendo no Body da requisição:
+- [ ] Para mover sonda, faça um /PUT para http://localhost:3000/move.json escrendo no Body da requisição:
 ```
 { "movimentos": [ "GE", "M" ] }
 ```
