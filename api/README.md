@@ -1,24 +1,102 @@
-# README
+# Exemplo WebService REST
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A aplicação realiza as seguintes tarefas:
 
-Things you may want to cover:
++ Envia a sonda para a posição inicial (x = 0, y =0 e frente da sonda virada para direita) através de um método POST /start
 
-* Ruby version
++ Mostra a posição atual da sonda através de um método GET /position
 
-* System dependencies
++ Recebe uma sequência de movimentos e mostra as coordenadas da posição final através do método PUT /move.json
 
-* Configuration
+&nbsp;
+## Instruções
 
-* Database creation
+#### Requisitos ####
 
-* Database initialization
+- [ ] Instalar ruby 2.5.3
 
-* How to run the test suite
+- [ ] Ferramenta para teste de API que possa operar com cookies 
 
-* Services (job queues, cache servers, search engines, etc.)
+&nbsp;
+#### Aplicação ####
 
-* Deployment instructions
+- [ ] Baixar os arquivos deste repositório
 
-* ...
+- [ ] Acessar a pasta 'api'
+
+- [ ] Rodar o comando
+
+```bash
+$ bundle
+```
+
+- [ ] Rodar o comando
+
+```bash
+$ rails s
+```
+&nbsp;
+## Funcionamento esperado
+
+#### 1. /POST ####
+
++ Ao realizar o POST /start , o retorno é um body em branco com indicação de sucesso no cabeçalho
+&nbsp;
+
+
+#### 2. /GET ####
+
++ Ao realizar o GET /position, o retorno experado é um JSON com as seguintes informações:
+&nbsp;
+
+```json
+
+{
+  "x": 0,
+  "y": 0,
+  "face": :D
+}
+```
+
+#### 3. /PUT ####
+
++ Para realizar o PUT /move.json, é necessário enviar o seguinte parâmetro:
+
+| **Parâmetro** | **Descrição** | **Tipo** | **Regra** |
+| ------------- | ------------- | ----------- | --------- |
+| movimentos | Movimentos que a sonda pode realizar | Array | Valores possíveis: "GE" / "GD" / "M" |
+&nbsp;
+
++ Abaixo um exemplo de preenchimento do parâmetro "movimentos"
+
+```json
+{
+  "movimentos": ["GE", "M", "GD"]
+}
+```
+&nbsp;
+
++ Ao realizar o PUT /move.json , o retorno esperado é um Json. Abaixo um exemplo deste retorno:
+&nbsp;
+
+```json
+{
+    "x": 0,
+    "y": 1,
+}
+```
+&nbsp;
+## Testando a aplicação
+
+- [ ] Use o [Advanced REST client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo) para testar a aplicação;
+&nbsp;
+
+- [ ] Para enviar a sonda para posição inicial, faça um /POST para http://localhost:3000/start
+&nbsp;
+- [ ] Para verificar a posição da sonda, faça um /GET para http://localhost:3000/position
+&nbsp;
+- [ ] Para mover sonda, faça um /PUT para http://localhost:3000/move.json escrendo no Body da requisição:
+```
+{ "movimentos": [ "GE", "M" ] }
+```
+&nbsp;
