@@ -2,12 +2,13 @@
 
 A aplicação realiza as seguintes tarefas:
 
-+ Envia a sonda para a posição inicial (x = 0, y =0 e frente da sonda virada para direita) através de um método POST para /start
++ Envia a sonda para a posição inicial (x = 0, y =0 e frente da sonda virada para direita) através de um método POST /start
 
-+ Mostra a posição atual da sonda através de um método GET para /position
++ Mostra a posição atual da sonda através de um método GET /position
 
-+ Recebe uma sequência de movimentos e mostra as coordenadas da posição final através do método PUT para /move.json
++ Recebe uma sequência de movimentos e mostra as coordenadas da posição final através do método PUT /move.json
 
+&nbsp;
 ## Instruções
 
 #### Requisitos ####
@@ -17,7 +18,6 @@ A aplicação realiza as seguintes tarefas:
 - [ ] Ferramenta para teste de API que possa operar com cookies 
 
 &nbsp;
-
 #### Aplicação ####
 
 - [ ] Baixar os arquivos deste repositório
@@ -35,8 +35,7 @@ $ bundle
 ```bash
 $ rails s
 ```
-
-
+&nbsp;
 ## Funcionamento esperado
 
 #### 1. /POST ####
@@ -87,7 +86,6 @@ $ rails s
 }
 ```
 &nbsp;
-
 ## Testando a aplicação
 
 - [ ] Use o [Advanced REST client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo) para testar a aplicação;
