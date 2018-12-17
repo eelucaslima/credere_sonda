@@ -1,6 +1,10 @@
 # Credere - Sonda #
 
-### Deploy to production with Heroku ###
+## Executando aplicativo localmente ##
+
+Instruções em api/README.md
+
+### Colocando aplicativo para produção com o Heroku ###
 
 ```bash
 $ cd api
