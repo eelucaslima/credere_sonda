@@ -9,13 +9,13 @@ module Services
       B: { x: +0, y: -1 }
     }.freeze
 
-    def initialize(probe, movements = {})
+    def initialize(probe, movements)
       @probe = probe
-      @movements = movements
-      @direction = DIRECTION[@probe.face.to_sym]
+      @movements = movements || []
     end
 
     def call
+      @direction = DIRECTION[@probe.face.to_sym]
       @movements.each do |movement|
         action(movement)
       end
