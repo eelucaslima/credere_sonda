@@ -1,6 +1,6 @@
 # Credere - Sonda #
 
-## Executando aplicativo localmente ##
+### Executando aplicativo localmente ###
 
 Instruções em api/README.md
 
