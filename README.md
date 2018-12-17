@@ -2,7 +2,7 @@
 
 ### Executando aplicativo localmente ###
 
-Instruções em api/README.md
+Instruções em [api/README.md](https://github.com/eelucaslima/credere_sonda/blob/master/api/README.md)
 
 ### Colocando aplicativo para produção com o Heroku ###
 
